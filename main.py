@@ -9,3 +9,4 @@ def preflight(idea: str):
     spec = generate_preflight_spec(idea)
     return {"preflight_spec": spec}
 
+uvicorn main:app --reload
