@@ -71,9 +71,12 @@ Before writing a single line of the agent, the architecture is already correct a
 
 Why This Matters
 
-This repository demonstrates the method I use with AI as a cognitive prototyping tool for reliable system design
+This repository demonstrates the method I use with AI as a cognitive prototyping tool for reliable system design:
 
 It is the reason my projects rarely require redesign after implementation.
+
+It is the reason my projects rarely require architectural redesign after implementation.
+
 
 Running the Preflight API
 uvicorn main:app --reload --port 8001
