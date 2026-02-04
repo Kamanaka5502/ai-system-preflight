@@ -42,7 +42,8 @@ Likely failure modes before they happen
 
 Observability and logging requirements
 
-Evaluation criteria for correctness
+Evaluation criteria for correctness.
+
 The output is a build contract that can be implemented without architectural surprises or redesign.
 
 Example
