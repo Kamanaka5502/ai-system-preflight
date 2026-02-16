@@ -1,8 +1,10 @@
 # AI System Preflight
 
-Pre-execution validation layer for AI systems.
+The preflight layer acts as a hard gate before inference.
 
 Before an AI system is allowed to act, this module verifies structural integrity, configuration consistency, and critical invariants.
+
+Designed to sit between request intake and model invocation as a deterministic execution gate.
 
 ---
 
@@ -34,16 +36,16 @@ If any check fails, execution is halted.
 
 ## Architecture
 
-User Request  
-→ Preflight Checks  
-→ Model / Tool Invocation  
-→ Structured Output  
+User Request
+→ Deterministic Preflight
+→ Model / Tool Invocation
+→ Structured Output
 
 Preflight acts as a hard gate before inference.
 
 ---
 
-## Example
+## Example Execution
 
 ```bash
 python preflight.py --input example.json
