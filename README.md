@@ -2,17 +2,18 @@
 
 Pre-execution validation layer for AI systems.
 
-Before an AI system is allowed to act, this module verifies structural integrity, configuration consistency, and expected invariants.
+Before an AI system is allowed to act, this module verifies structural integrity, configuration consistency, and critical invariants.
 
 ---
 
 ## Purpose
 
 Most AI failures are not model failures — they are system failures:
-- Missing invariants
-- Corrupted state
-- Invalid assumptions
-- Silent configuration drift
+
+- Missing invariants  
+- Corrupted state  
+- Invalid assumptions  
+- Silent configuration drift  
 
 This project implements a deterministic preflight layer that checks critical conditions before model execution.
 
@@ -20,12 +21,12 @@ This project implements a deterministic preflight layer that checks critical con
 
 ## What It Checks
 
-- Required configuration fields
-- Schema integrity
-- Tool availability
-- Input format validation
-- Guardrail invariants
-- Expected response structure
+- Required configuration fields  
+- Schema integrity  
+- Tool availability  
+- Input format validation  
+- Guardrail invariants  
+- Expected response structure  
 
 If any check fails, execution is halted.
 
@@ -47,7 +48,7 @@ Preflight acts as a hard gate before inference.
 ```bash
 python preflight.py --input example.json
 
-##Output
+## Example output:
 
 ✔ Schema valid
 ✔ Required keys present
@@ -56,11 +57,10 @@ Execution blocked.
 
 ## Why This Matters
 
+Production AI systems fail at the boundaries — not in the demo.
 Preflight validation prevents:
 Silent execution errors
 Undefined tool calls
 Invalid state propagation
-Production instability
+Untraceable production instability
 Deterministic systems fail loudly and early.
-
-
